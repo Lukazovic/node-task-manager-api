@@ -102,11 +102,12 @@ router.delete('/tasks/:id', auth, async (req, res) => {
     });
 
     if (!task) {
-      res.status(404).send('Task not found!');
+      res.status(404).send();
     }
-    res.status(200).send(task);
+
+    res.send(task);
   } catch (error) {
-    res.status(500).json(error);
+    res.status(500).send();
   }
 });
 
