@@ -17,19 +17,9 @@ router.post(
   '/users/me/avatar',
   upload.single('avatar'),
   auth,
-  userController.uploadUserAvatar,
-  (error, req, res, next) => {
-    res.status(400).send({ error: error.message });
-  }
+  userController.uploadUserAvatar
 );
-router.delete(
-  '/users/me/avatar',
-  auth,
-  userController.deleteUserAvatar,
-  (error, req, res, next) => {
-    res.status(400).send({ error: error.message });
-  }
-);
+router.delete('/users/me/avatar', auth, userController.deleteUserAvatar);
 router.get('/users/me/avatar', auth, userController.getUserAvatar);
 router.get('/users/:id/avatar', userController.getUserAvatarById);
 
