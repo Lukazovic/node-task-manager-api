@@ -8,14 +8,14 @@ const auth = async (req, res, next) => {
     const user = await User.findOne({ _id: decode._id, 'tokens.token': token });
 
     if (!user) {
-      throw new Error();
+      return res.status(401).json({ error: 'Token not found' });
     }
 
     req.token = token;
     req.user = user;
     next();
   } catch (error) {
-    res.status(401).send({ error: 'Please authenticate!' });
+    return res.status(401).json({ error: 'Not authorized' });
   }
 };
 
