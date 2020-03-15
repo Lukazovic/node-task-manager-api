@@ -4,18 +4,23 @@ Backend RESTful API to a task manager application
 ### Built With
 
 - [Node.js](https://nodejs.org/en/)
+- [mongoDB](https://www.mongodb.com/)
 
 https://task-manager-node-rest-api.herokuapp.com/
 
 ## Table of Contents
 
-**Observation: This application is deployed in Heroku. So if you want to use it from Heroku you can skip to the REST API part where you will find all the informations you need to use the API endpoints.**
+**Observation: This application is deployed in Heroku. So if you want to use it from Heroku you can skip the setup part.**
 
 - [Setup (Optional)](#setup)
   - [Prerequisites](#prerequisites)
   - [Installing](#installing)
   - [Running the tests](#running-the-tests)
   - [Running the API](#running-the-api)
+- [API](#api)
+  - [All Endpoints](#all-endpoints)
+    - [Users endpoints](#users-endpoints)
+    - [Tasks endpoints](#users-endpoints)
 - [Authors](#authors)
   
 
@@ -71,7 +76,7 @@ JWT_SECRET=<Secret-JWT>
 $ npm run test
 ```
 
-## Running the API
+### Running the API
 
 To run the API (in the project folder):
 ```
@@ -80,11 +85,11 @@ $ npm run start
 
 > Access in: localhost:**Port-Number**
 
+## API
 
+### All Endpoints
 
-# REST API
-
-## All API user endpoints:
+#### Users Endpoints:
 
 - POST: `/users` - Create new user
 - POST: `/users/login` - Login a user
@@ -98,6 +103,14 @@ $ npm run start
 - POST: `/users/logoutAll` - Logout a user from all sessions
 - DELETE: `/users/me/avatar` - Delete a logged user's avatar
 - DELETE: `/users/me` - Delete a logged user
+
+#### Tasks Endpoints:
+
+- POST: `/tasks` - Create new task to a logged user
+- GET: `/users` - Get all tasks from a logged user
+- GET : `/tasks/<id>` - Get a task by ID from a logged user
+- PATCH: `/tasks/<id>` - Update a task by ID from a logged user
+- DELETE: `/tasks/<id>` - Delete a task by ID from a logged user
 
 ## Authors
 
