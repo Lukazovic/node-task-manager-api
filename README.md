@@ -92,7 +92,7 @@ $ npm run start
 ### Users Endpoints:
 
 - POST: `/users` - Create new user
-- POST: `/users/login` - Login a existing user
+- POST: `/users/login` - Login an existing user
 - PATCH: `/users/me` - Update user's informations
 - GET : `/users/me` - Get a profile from a logged user
 - GET: `/users/<id>` - Get a user's profile by ID
@@ -173,6 +173,7 @@ $ npm run start
 ##### Observation:
 
 > **As response you will receive a token so you will be able to use it to authenticate the user when it needed**
+> As soon as the user is created the application will send an email to the user's email
 
 ##### Response example:
 
@@ -190,7 +191,7 @@ $ npm run start
 }
 ```
 
-### Login a existing user
+### Login an existing user
 
 #### Method:
 
@@ -268,6 +269,68 @@ $ npm run start
 }
 ```
 
+### Get a profile from a logged user
+
+#### Method:
+
+- GET: `/users/me`
+
+#### URL Example
+
+> [https://task-manager-node-rest-api.herokuapp.com/users/me](https://task-manager-node-rest-api.herokuapp.com/users/me)
+
+#### Paramethers
+
+|   Paramether   |       Description    |     Type     |   Required   |
+| :------------: | :------------------: | :----------: | :----------: |
+|  Authorization | Session user's Token | Bearer Token |     True     |
+
+### Get a user's profile by ID
+
+
+#### Method:
+
+- GET: `/users/<id>`
+	- `<id> is the identifier of the user`
+
+#### URL Example
+
+> [https://task-manager-node-rest-api.herokuapp.com/users/5e6e0117bb997d0017c94f0d](https://task-manager-node-rest-api.herokuapp.com/users/5e6e0117bb997d0017c94f0d)
+
+### Upload a logged user's avatar
+
+#### Method:
+
+- POST: `/users/me/avatar`
+
+#### URL Example
+
+> [https://task-manager-node-rest-api.herokuapp.com/users/me/avatar](https://task-manager-node-rest-api.herokuapp.com/users/me/avatar)
+
+#### Paramethers
+
+|   Paramether   |       Description    |     Type     |   Required   |
+| :------------: | :------------------: | :----------: | :----------: |
+|  Authorization | Session user's Token | Bearer Token |     True     |
+|     avatar     |    User's avatar     |  Form-Data   |     True     |
+
+### Get the avatar from a logged user
+
+#### Method:
+
+- GET: `/users/me/avatar`
+
+#### URL Example
+
+> [https://task-manager-node-rest-api.herokuapp.com/users/me/avatar](https://task-manager-node-rest-api.herokuapp.com/users/me/avatar)
+
+#### Paramethers
+
+|   Paramether   |       Description    |     Type     |   Required   |
+| :------------: | :------------------: | :----------: | :----------: |
+|  Authorization | Session user's Token | Bearer Token |     True     |
+
+- GET: `/users/me/avatar` - Get the avatar from a logged user
 
 ## Authors
 
