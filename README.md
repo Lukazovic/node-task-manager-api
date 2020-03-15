@@ -297,6 +297,12 @@ $ npm run start
 
 > [https://task-manager-node-rest-api.herokuapp.com/users/5e6e0117bb997d0017c94f0d](https://task-manager-node-rest-api.herokuapp.com/users/5e6e0117bb997d0017c94f0d)
 
+#### Paramethers
+
+|   Paramether   |       Description   |   Type     |
+| :------------: | :-----------------: | :--------: |
+|      _id       |   User's ID         |   String   |
+
 ### Upload a logged user's avatar
 
 #### Method:
@@ -341,6 +347,11 @@ $ npm run start
 
 > [https://task-manager-node-rest-api.herokuapp.com/users/5e6e0117bb997d0017c94f0d/avatar](https://task-manager-node-rest-api.herokuapp.com/users/5e6e0117bb997d0017c94f0d/avatar)
 
+#### Paramethers
+
+|   Paramether   |       Description   |   Type     |
+| :------------: | :-----------------: | :--------: |
+|      _id       |   User's ID         |   String   |
 
 ### Logout a user
 
@@ -408,6 +419,107 @@ $ npm run start
 |   Paramether   |       Description    |     Type     |   Required   |
 | :------------: | :------------------: | :----------: | :----------: |
 |  Authorization | Session user's Token | Bearer Token |     True     |
+
+## How to use users API Endpoints
+
+### Create new task to a logged user
+
+#### Method:
+
+- POST: `/tasks`
+
+#### URL Example
+
+> [https://task-manager-node-rest-api.herokuapp.com/tasks](https://task-manager-node-rest-api.herokuapp.com/tasks)
+
+#### Paramethers
+
+|   Paramether   |      Description       |   Type     |   Required   |
+| :------------: | :--------------------: | :--------: | :----------: |
+|   description  |    Tak's description   |   String   |     True     |
+|   completed    |    Task's situation    |   Boolean  |     False    |
+
+##### JSON example:
+
+```json
+{
+	"description": "Do a task",
+	"completed": false
+}
+```
+
+##### Response example:
+
+```json
+{
+    "completed": false,
+    "_id": "5e6e68914934ce0017892730",
+    "description": "Do a task",
+    "owner": "5e6e0117bb997d0017c94f0d",
+    "createdAt": "2020-03-15T17:40:33.445Z",
+    "updatedAt": "2020-03-15T17:40:33.445Z",
+    "__v": 0
+}
+```
+
+### Get all tasks from a logged user
+
+#### Method:
+
+- GET: `/tasks`
+
+#### URL Example
+
+> [https://task-manager-node-rest-api.herokuapp.com/tasks](https://task-manager-node-rest-api.herokuapp.com/tasks)
+
+### Get a task by ID from a logged user
+
+#### Method:
+
+ GET : `/tasks/<id>`
+ 	- `<id> is the identifier of the user`
+
+#### URL Example
+
+> [https://task-manager-node-rest-api.herokuapp.com/tasks/5e6e0117bb997d0017c94f0d](https://task-manager-node-rest-api.herokuapp.com/tasks/5e6e0117bb997d0017c94f0d)
+
+### Update a task by ID from a logged user
+
+#### Method:
+
+- PATCH: `/tasks/<id>`
+ 	- `<id> is the identifier of the task you want to update`
+
+#### URL Example
+
+> [https://task-manager-node-rest-api.herokuapp.com/tasks/5e6e0117bb997d0017c94f0d](https://task-manager-node-rest-api.herokuapp.com/tasks/5e6e0117bb997d0017c94f0d)
+
+#### Paramethers
+
+|   Paramether   |      Description       |   Type     |   Required   |
+| :------------: | :--------------------: | :--------: | :----------: |
+|   description  |    Tak's description   |   String   |     False    |
+|   completed    |    Task's situation    |   Boolean  |     False    |
+
+##### JSON example:
+
+```json
+{
+	"description": "Do a task",
+	"completed": true
+}
+```
+
+### Delete a task by ID from a logged user
+
+#### Method:
+
+- PATCH: `/tasks/<id>`
+ 	- `<id> is the identifier of the task you want to delete`
+
+#### URL Example
+
+> [https://task-manager-node-rest-api.herokuapp.com/tasks/5e6e0117bb997d0017c94f0d](https://task-manager-node-rest-api.herokuapp.com/tasks/5e6e0117bb997d0017c94f0d)
 
 ## Authors
 
