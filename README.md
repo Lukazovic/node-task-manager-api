@@ -18,8 +18,10 @@ https://task-manager-node-rest-api.herokuapp.com/
   - [Running the tests](#running-the-tests)
   - [Running the API](#running-the-api)
 - [All Endpoints](#all-endpoints)
-  - [Users endpoints](#users-endpoints)
-  - [Tasks endpoints](#users-endpoints)
+  - [Users Endpoints](#users-endpoints)
+  - [Tasks Endpoints](#tasks-endpoints)
+  - [Users Paramethers](#users-paramethers)
+  - [Tasks Paramethers](#tasks-paramethers)
 - [Authors](#authors)
   
 
