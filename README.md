@@ -20,9 +20,21 @@ https://task-manager-node-rest-api.herokuapp.com/
 - [All Endpoints](#all-endpoints)
   - [Users Endpoints](#users-endpoints)
   - [Tasks Endpoints](#tasks-endpoints)
-- [All Paramethers](#all-paramethers)
-  - [Users Paramethers](#users-paramethers)
-  - [Tasks Paramethers](#tasks-paramethers)
+- [How to use users API Endpoints](#how-to-use-users-api-endpoints)
+  - [Create new user](#create-new-user)
+  - [Login an existing user](#login-an-existing-user)
+  - [Update user's informations](#update-user's-informations)
+  - [Get profile from a logged user](#get-profile-from-a-logged-user)
+  - [Get user's profile by ID](#get-user's-profile-by-id)
+  - [Upload logged user's avatar](#upload-logged-user's-avatar)
+  - [Get the avatar from a logged user](#get-the-avatar-from-a-logged-user)
+  - [Get the user's avatar profile by ID](#get-the-user's-avatar-profile-by-id)
+  - [Logout a user](#logout-a-user)
+  - [Logout a user from all sessions](#logout-a-user-from-all-sessions)
+  - [Delete a logged user's avatar](#delete-a-logged-user's-avatar)
+  - [Delete a logged user](#delete-a-logged-user)
+
+
 - [Authors](#authors)
   
 
@@ -94,9 +106,9 @@ $ npm run start
 - POST: `/users` - Create new user
 - POST: `/users/login` - Login an existing user
 - PATCH: `/users/me` - Update user's informations
-- GET : `/users/me` - Get a profile from a logged user
-- GET: `/users/<id>` - Get a user's profile by ID
-- POST: `/users/me/avatar` - Upload a logged user's avatar
+- GET : `/users/me` - Get profile from a logged user
+- GET: `/users/<id>` - Get user's profile by ID
+- POST: `/users/me/avatar` - Upload logged user's avatar
 - GET: `/users/me/avatar` - Get the avatar from a logged user
 - GET: `/users/<id>/avatar` - Get the user's avatar profile by ID
 - POST: `/users/logout` - Logout a user
@@ -111,28 +123,6 @@ $ npm run start
 - GET : `/tasks/<id>` - Get a task by ID from a logged user
 - PATCH: `/tasks/<id>` - Update a task by ID from a logged user
 - DELETE: `/tasks/<id>` - Delete a task by ID from a logged user
-
-## All Paramethers
-
-### Users Paramethers
-
-|   Paramether   |       Description   |   Type     |
-| :------------: | :-----------------: | :--------: |
-|      _id       |   User's ID         |   String   |
-|      name      |   User's name       |   String   |
-|      age       |   User's age        |   Integer  |
-|      email     |   User's email      |   String   |
-|    password    |   User's password   |   String   |
-
-> **Observation: password length has to be greater than 7 and can not contain the word `password`**
-
-### Tasks Paramethers
-
-|   Paramether   |      Description       |   Type     |
-| :------------: | :--------------------: | :--------: |
-|      _id       |    Task's ID           |   String   |
-|   description  |    Tak's description   |   String   |
-|   completed    |    Task's situation    |   Boolean  |
 
 ## How to use users API Endpoints
 
@@ -269,7 +259,7 @@ $ npm run start
 }
 ```
 
-### Get a profile from a logged user
+### Get profile from a logged user
 
 #### Method:
 
@@ -285,7 +275,7 @@ $ npm run start
 | :------------: | :------------------: | :----------: | :----------: |
 |  Authorization | Session user's Token | Bearer Token |     True     |
 
-### Get a user's profile by ID
+### Get user's profile by ID
 
 
 #### Method:
@@ -303,7 +293,7 @@ $ npm run start
 | :------------: | :-----------------: | :--------: |
 |      _id       |   User's ID         |   String   |
 
-### Upload a logged user's avatar
+### Upload logged user's avatar
 
 #### Method:
 
@@ -320,7 +310,7 @@ $ npm run start
 |  Authorization | Session user's Token | Bearer Token |     True     |
 |     avatar     |    User's avatar     |  Form-Data   |     True     |
 
-### Get the avatar from a logged user
+### Get avatar from a logged user
 
 #### Method:
 
