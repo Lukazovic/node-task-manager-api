@@ -1,4 +1,4 @@
-# Node Task Manager RESTFul API
+# Node Task Manager RESTful API
 Backend RESTful API to a task manager application
 
 ### Built With
@@ -15,8 +15,8 @@ https://task-manager-node-rest-api.herokuapp.com/
 - [Setup (Optional)](#setup)
   - [Prerequisites](#prerequisites)
   - [Installing](#installing)
-  - [Running the tests](#running-the-tests)
-  - [Running the API](#running-the-api)
+  - [Running tests](#running-the-tests)
+  - [Running API](#running-the-api)
 - [All Endpoints](#all-endpoints)
   - [Users Endpoints](#users-endpoints)
   - [Tasks Endpoints](#tasks-endpoints)
@@ -73,12 +73,12 @@ JWT_SECRET=<Secret-JWT>
 
 **To setup the tests environment**: You will have to create a file at ``./config`` called ``test.env`` and configure as the example above **EXCEPT the Data-Base-Name where you should change the name ``(example: node-task-manager-test-api)``;**
 
-### Running the Tests
+### Running Tests
 ```
 $ npm run test
 ```
 
-### Running the API
+### Running API
 
 To run the API (in the project folder):
 ```
@@ -330,7 +330,84 @@ $ npm run start
 | :------------: | :------------------: | :----------: | :----------: |
 |  Authorization | Session user's Token | Bearer Token |     True     |
 
-- GET: `/users/me/avatar` - Get the avatar from a logged user
+### Get the user's avatar profile by ID
+
+#### Method:
+
+- GET: `/users/<id>/avatar`
+	- `<id> is the identifier of the user`
+
+#### URL Example
+
+> [https://task-manager-node-rest-api.herokuapp.com/users/5e6e0117bb997d0017c94f0d/avatar](https://task-manager-node-rest-api.herokuapp.com/users/5e6e0117bb997d0017c94f0d/avatar)
+
+
+### Logout a user
+
+#### Method:
+
+- POST: `/users/logout`
+
+#### URL Example
+
+> [https://task-manager-node-rest-api.herokuapp.com/users/logout](https://task-manager-node-rest-api.herokuapp.com/users/logout)
+
+#### Paramethers
+
+|   Paramether   |       Description    |     Type     |   Required   |
+| :------------: | :------------------: | :----------: | :----------: |
+|  Authorization | Session user's Token | Bearer Token |     True     |
+
+
+### Logout a user from all sessions
+
+#### Method:
+
+- POST: `/users/logoutAll`
+
+#### URL Example
+
+> [https://task-manager-node-rest-api.herokuapp.com/users/logoutAll](https://task-manager-node-rest-api.herokuapp.com/users/logoutAll)
+
+#### Paramethers
+
+|   Paramether   |       Description    |     Type     |   Required   |
+| :------------: | :------------------: | :----------: | :----------: |
+|  Authorization | Session user's Token | Bearer Token |     True     |
+
+
+### Delete a logged user's avatar
+
+#### Method:
+
+- DELETE: `/users/me/avatar`
+
+#### URL Example
+
+> [https://task-manager-node-rest-api.herokuapp.com/users/me/avatar](https://task-manager-node-rest-api.herokuapp.com/users/me/avatar)
+
+#### Paramethers
+
+|   Paramether   |       Description    |     Type     |   Required   |
+| :------------: | :------------------: | :----------: | :----------: |
+|  Authorization | Session user's Token | Bearer Token |     True     |
+
+
+### Delete a logged user
+
+#### Method:
+
+- DELETE: `/users/me`
+
+#### URL Example
+
+> [https://task-manager-node-rest-api.herokuapp.com/users/me](https://task-manager-node-rest-api.herokuapp.com/users/me)
+
+#### Paramethers
+
+|   Paramether   |       Description    |     Type     |   Required   |
+| :------------: | :------------------: | :----------: | :----------: |
+|  Authorization | Session user's Token | Bearer Token |     True     |
 
 ## Authors
 
