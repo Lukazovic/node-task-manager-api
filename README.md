@@ -20,6 +20,7 @@ https://task-manager-node-rest-api.herokuapp.com/
 - [All Endpoints](#all-endpoints)
   - [Users Endpoints](#users-endpoints)
   - [Tasks Endpoints](#tasks-endpoints)
+- [All Paramethers](#all-paramethers)
   - [Users Paramethers](#users-paramethers)
   - [Tasks Paramethers](#tasks-paramethers)
 - [Authors](#authors)
@@ -111,7 +112,7 @@ $ npm run start
 - PATCH: `/tasks/<id>` - Update a task by ID from a logged user
 - DELETE: `/tasks/<id>` - Delete a task by ID from a logged user
 
-## Paramethers
+## All Paramethers
 
 ### Users Paramethers
 
@@ -123,9 +124,9 @@ $ npm run start
 |      email     |   User's email      |   String   |
 |    password    |   User's password   |   String   |
 
-> Observation: password length has to be greater than 7 and can not contain the word `password`
+> **Observation: password length has to be greater than 7 and can not contain the word `password`**
 
-### Task Paramethers
+### Tasks Paramethers
 
 |   Paramether   |      Description       |   Type     |
 | :------------: | :--------------------: | :--------: |
@@ -133,35 +134,30 @@ $ npm run start
 |   description  |    Tak's description   |   String   |
 |   completed    |    Task's situation    |   Boolean  |
 
-### How to use API endpoints
+## How to use users API Endpoints
 
-## Add Survivors
+### Create new user
 
 #### Method:
 
-- POST: `/api/survivors`
+- POST: `/users`
 
 #### URL Example
 
-> [http://localhost:3001/api/survivors](http://localhost:3001/api/survivors)
+> [https://task-manager-node-rest-api.herokuapp.com/users](https://task-manager-node-rest-api.herokuapp.com/users)
 
 #### Paramethers
 
-|       Paramether      |                 Description                        |                 Type                  |
-| :-------------------: | :------------------------------------------------: | :-----------------------------------: |
-|          _id          |                Survivor ID                         |                String                 |
-|         name          |                Survivor name                       |                String                 |
-|          age          |                Survivor age                        |                Integer                |
-|        gender         |                Survivor gender                     |                Char                   |
-|        latitude       |         Last latitude of survivor location         |                Decimal                |
-|        longitude      |         Last longitude of survivor location        |                Decimal                |
-|    quantityFijiWater  |        How many Fiji Waters the survivor has       |                Integer                |
-|  quantityCampbellSoup |       How many Campbell Soup the survivor has      |                Integer                |
-| quantityFirstAidPouch |      How many First Aid Pouch the survivor has     |                Integer                |
-|      quantityAk47     |           How many AK-47 the survivor has          |                Integer                |
-|      quantityFlags    |      How many times the survivor was denounced     |                Integer                |
+|   Paramether   |       Description    |     Type     |   Required   |
+| :------------: | :------------------: | :----------: | :----------: |
+|      _id       |   User's ID          |    String    |     False    |
+|      name      |   User's name        |    String    |     True     |
+|      age       |   User's age         |    Integer   |     False    |
+|      email     |   User's email       |    String    |     True     |
+|    password    |   User's password    |    String    |     True     |
+|  Authorization | Session user's Token | Bearer Token |     True     |
 
-JSON example:
+##### JSON example:
 
 ```json
 {
