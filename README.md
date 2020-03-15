@@ -471,7 +471,7 @@ $ npm run start
 #### Method:
 
  GET : `/tasks/<id>`
- 	- `<id> is the identifier of the user`
+		- `<id> is the identifier of the user`
 
 #### URL Example
 
