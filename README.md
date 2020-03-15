@@ -23,15 +23,15 @@ https://task-manager-node-rest-api.herokuapp.com/
 - [How to use users API Endpoints](#how-to-use-users-api-endpoints)
   - [Create new user](#create-new-user)
   - [Login an existing user](#login-an-existing-user)
-  - [Update users informations](#update-users-informations)
+  - [Update user informations](#update-user-informations)
   - [Get profile from a logged user](#get-profile-from-a-logged-user)
-  - [Get user's profile by ID](#get-user-s-profile-by-id)
-  - [Upload logged user's avatar](#upload-logged-user's-avatar)
+  - [Get user profile by ID](#get-user-profile-by-id)
+  - [Upload logged user avatar](#upload-logged-user-avatar)
   - [Get the avatar from a logged user](#get-the-avatar-from-a-logged-user)
-  - [Get the user's avatar profile by ID](#get-the-user's-avatar-profile-by-id)
+  - [Get the user avatar profile by ID](#get-the-user-avatar-profile-by-id)
   - [Logout a user](#logout-a-user)
   - [Logout a user from all sessions](#logout-a-user-from-all-sessions)
-  - [Delete a logged user's avatar](#delete-a-logged-user's-avatar)
+  - [Delete a logged user avatar](#delete-a-logged-user-avatar)
   - [Delete a logged user](#delete-a-logged-user)
 
 
@@ -105,15 +105,15 @@ $ npm run start
 
 - POST: `/users` - Create new user
 - POST: `/users/login` - Login an existing user
-- PATCH: `/users/me` - Update user's informations
+- PATCH: `/users/me` - Update user informations
 - GET : `/users/me` - Get profile from a logged user
-- GET: `/users/<id>` - Get user's profile by ID
-- POST: `/users/me/avatar` - Upload logged user's avatar
+- GET: `/users/<id>` - Get user profile by ID
+- POST: `/users/me/avatar` - Upload logged user avatar
 - GET: `/users/me/avatar` - Get the avatar from a logged user
-- GET: `/users/<id>/avatar` - Get the user's avatar profile by ID
+- GET: `/users/<id>/avatar` - Get the user avatar profile by ID
 - POST: `/users/logout` - Logout a user
 - POST: `/users/logoutAll` - Logout a user from all sessions
-- DELETE: `/users/me/avatar` - Delete a logged user's avatar
+- DELETE: `/users/me/avatar` - Delete a logged user avatar
 - DELETE: `/users/me` - Delete a logged user
 
 ### Tasks Endpoints:
@@ -228,7 +228,7 @@ $ npm run start
 }
 ```
 
-### Update user's informations
+### Update user informations
 
 #### Method:
 
@@ -275,7 +275,7 @@ $ npm run start
 | :------------: | :------------------: | :----------: | :----------: |
 |  Authorization | Session user's Token | Bearer Token |     True     |
 
-### Get user's profile by ID
+### Get user profile by ID
 
 
 #### Method:
@@ -293,7 +293,7 @@ $ npm run start
 | :------------: | :-----------------: | :--------: |
 |      _id       |   User's ID         |   String   |
 
-### Upload logged user's avatar
+### Upload logged user avatar
 
 #### Method:
 
@@ -326,7 +326,7 @@ $ npm run start
 | :------------: | :------------------: | :----------: | :----------: |
 |  Authorization | Session user's Token | Bearer Token |     True     |
 
-### Get the user's avatar profile by ID
+### Get the user avatar profile by ID
 
 #### Method:
 
@@ -377,7 +377,7 @@ $ npm run start
 |  Authorization | Session user's Token | Bearer Token |     True     |
 
 
-### Delete a logged user's avatar
+### Delete a logged user avatar
 
 #### Method:
 
