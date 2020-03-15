@@ -1,12 +1,17 @@
 # Node Task Manager RESTful API
-Backend RESTful API to a task manager application
+
+A Backend RESTful API to store and organize your tasks. It is a secure API because it does not let other users acess your tasks by authenticate all users.
 
 ### Built With
 
 - [Node.js](https://nodejs.org/en/)
+- [Express](https://expressjs.com/)
 - [mongoDB](https://www.mongodb.com/)
-
-https://task-manager-node-rest-api.herokuapp.com/
+- [Validator.js](https://www.npmjs.com/package/validator)
+- [Bcrypt.js](https://www.npmjs.com/package/bcrypt)
+- [JSON Web Token](https://www.npmjs.com/package/jsonwebtoken)
+- [Jest](https://jestjs.io/)
+- [SuperTest](https://www.npmjs.com/package/supertest)
 
 ## Table of Contents
 
@@ -18,6 +23,7 @@ https://task-manager-node-rest-api.herokuapp.com/
   - [Running tests](#running-the-tests)
   - [Running API](#running-the-api)
 - [All Endpoints](#all-endpoints)
+  - [Base URL](#base-url)
   - [Users Endpoints](#users-endpoints)
   - [Tasks Endpoints](#tasks-endpoints)
 - [How to use users API Endpoints](#how-to-use-users-api-endpoints)
@@ -104,6 +110,10 @@ $ npm run start
 > Access in: localhost:**Port-Number**
 
 ## All Endpoints
+
+### Base URL
+
+- [https://task-manager-node-rest-api.herokuapp.com/](https://task-manager-node-rest-api.herokuapp.com/)
 
 ### Users Endpoints:
 
