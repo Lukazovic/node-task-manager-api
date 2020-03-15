@@ -124,9 +124,9 @@ $ npm run start
 
 - POST: `/tasks` - Create new task to a logged user
 - GET: `/users` - Get all tasks from a logged user
-- GET : `/tasks/<id>` - Get a task by ID from a logged user
-- PATCH: `/tasks/<id>` - Update a task by ID from a logged user
-- DELETE: `/tasks/<id>` - Delete a task by ID from a logged user
+- GET : `/tasks/<id>` - Get task by ID from a logged user
+- PATCH: `/tasks/<id>` - Update task by ID from a logged user
+- DELETE: `/tasks/<id>` - Delete task by ID from a logged user
 
 ## How to use users API Endpoints
 
@@ -471,7 +471,7 @@ $ npm run start
 #### Method:
 
  GET : `/tasks/<id>`
- 	- `<id> is the identifier of the user`
+	- `<id> is the identifier of the user`
 
 #### URL Example
 
@@ -482,7 +482,7 @@ $ npm run start
 #### Method:
 
 - PATCH: `/tasks/<id>`
- 	- `<id> is the identifier of the task you want to update`
+	- `<id> is the identifier of the task you want to update`
 
 #### URL Example
 
@@ -509,7 +509,7 @@ $ npm run start
 #### Method:
 
 - PATCH: `/tasks/<id>`
- 	- `<id> is the identifier of the task you want to delete`
+	- `<id> is the identifier of the task you want to delete`
 
 #### URL Example
 
