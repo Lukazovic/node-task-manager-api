@@ -476,6 +476,52 @@ $ npm run start
 
 > [https://task-manager-node-rest-api.herokuapp.com/tasks](https://task-manager-node-rest-api.herokuapp.com/tasks)
 
+#### Sorting tasks
+
+You can sort tasks by adding `?sortBy=completed:desc` to the URL in order to the GET all tasks sorted by not completed.
+
+You can also GET all tasks sorted by completed by addind `?sortBy=completed:asc` to the URL.
+
+#### Pagination tasks
+
+You can get a limit of tasks by adding `?limit=10` to the URL so you will get 10 tasks.
+
+> Example: https://task-manager-node-rest-api.herokuapp.com/tasks?limit=10
+
+You can skip the firsts tasks by adding `?skip=10` to the URL. So you can use pagination by limiting the tasks you get by each request and skiping some tasks by adding `?limit=10&skip=10`
+
+> Example: https://task-manager-node-rest-api.herokuapp.com/tasks?limit=10&skip=10
+
+#### Examples
+
+- Sorting tasks by completed:
+
+> https://task-manager-node-rest-api.herokuapp.com/tasks?sortBy=completed:asc
+
+- Sorting tasks by completed:
+
+> https://task-manager-node-rest-api.herokuapp.com/tasks?sortBy=completed:desc
+
+- Get only the first 10 tasks:
+
+> https://task-manager-node-rest-api.herokuapp.com/tasks?limit=10
+
+- Skip the first 10 tasks: 
+
+> https://task-manager-node-rest-api.herokuapp.com/tasks?skip=10
+
+- Pagination - Getting pages with 10 tasks per page.
+
+> Page 1: https://task-manager-node-rest-api.herokuapp.com/tasks?limit=10&skip=10
+
+> Page 2: https://task-manager-node-rest-api.herokuapp.com/tasks?limit=10&skip=20
+
+> Page 3: https://task-manager-node-rest-api.herokuapp.com/tasks?limit=10&skip=30
+
+- All togheter - Getting the second page with 10 tasks by page and sorting by not completed ones.
+
+> https://task-manager-node-rest-api.herokuapp.com/tasks?sortBy=completed:desc&limit=10&skip=10
+
 ### Get task by ID from a logged user
 
 #### Method:
