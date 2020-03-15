@@ -33,8 +33,12 @@ https://task-manager-node-rest-api.herokuapp.com/
   - [Logout a user from all sessions](#logout-a-user-from-all-sessions)
   - [Delete a logged user avatar](#delete-a-logged-user-avatar)
   - [Delete a logged user](#delete-a-logged-user)
-
-
+- [How to use tasks API Endpoints](#how-to-use-tasks-api-endpoints)
+  - [Create new task to a logged user](#create-new-task-to-a-logged-user)
+  - [Get all tasks from a logged user](#get-all-tasks-from-a-logged-user)
+  - [Get task by ID from a logged user](#get-task-by-id-from-a-logged-user)
+  - [Update task by ID from a logged user](#update-task-by-ID-from-a-logged-user)
+  - [Delete task by ID from a logged user](#delete-task-by-id-from-a-logged-user)
 - [Authors](#authors)
   
 
@@ -410,7 +414,7 @@ $ npm run start
 | :------------: | :------------------: | :----------: | :----------: |
 |  Authorization | Session user's Token | Bearer Token |     True     |
 
-## How to use users API Endpoints
+## How to use tasks API Endpoints
 
 ### Create new task to a logged user
 
@@ -462,7 +466,7 @@ $ npm run start
 
 > [https://task-manager-node-rest-api.herokuapp.com/tasks](https://task-manager-node-rest-api.herokuapp.com/tasks)
 
-### Get a task by ID from a logged user
+### Get task by ID from a logged user
 
 #### Method:
 
@@ -473,7 +477,7 @@ $ npm run start
 
 > [https://task-manager-node-rest-api.herokuapp.com/tasks/5e6e0117bb997d0017c94f0d](https://task-manager-node-rest-api.herokuapp.com/tasks/5e6e0117bb997d0017c94f0d)
 
-### Update a task by ID from a logged user
+### Update task by ID from a logged user
 
 #### Method:
 
@@ -500,7 +504,7 @@ $ npm run start
 }
 ```
 
-### Delete a task by ID from a logged user
+### Delete task by ID from a logged user
 
 #### Method:
 
