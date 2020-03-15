@@ -92,7 +92,7 @@ $ npm run start
 ### Users Endpoints:
 
 - POST: `/users` - Create new user
-- POST: `/users/login` - Login a user
+- POST: `/users/login` - Login a existing user
 - PATCH: `/users/me` - Update user's informations
 - GET : `/users/me` - Get a profile from a logged user
 - GET: `/users/<id>` - Get a user's profile by ID
@@ -150,12 +150,10 @@ $ npm run start
 
 |   Paramether   |       Description    |     Type     |   Required   |
 | :------------: | :------------------: | :----------: | :----------: |
-|      _id       |   User's ID          |    String    |     False    |
 |      name      |   User's name        |    String    |     True     |
 |      age       |   User's age         |    Integer   |     False    |
 |      email     |   User's email       |    String    |     True     |
 |    password    |   User's password    |    String    |     True     |
-|  Authorization | Session user's Token | Bearer Token |     True     |
 
 ##### Observation:
 
@@ -191,6 +189,85 @@ $ npm run start
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTZlMDExN2JiOTk3ZDAwMTdjOTRmMGQiLCJpYXQiOjE1ODQyNjc1NDN9.aAvvkMcEaSeQxKyu6wDQXfQ1z4hM9zn1myJT8Iw689U"
 }
 ```
+
+### Login a existing user
+
+#### Method:
+
+- POST: `/users/login`
+
+#### URL Example
+
+> [https://task-manager-node-rest-api.herokuapp.com/users/login](https://task-manager-node-rest-api.herokuapp.com/users/login)
+
+#### Paramethers
+
+|   Paramether   |       Description    |     Type     |   Required   |
+| :------------: | :------------------: | :----------: | :----------: |
+|      email     |   User's email       |    String    |     True     |
+|    password    |   User's password    |    String    |     True     |
+
+
+##### JSON example:
+
+```json
+{
+	"email": "test@email.com",
+	"password": "idontknow"
+}
+```
+
+##### Observation:
+
+> **As response you will receive a token so you will be able to use it to authenticate the user when it needed**
+
+##### Response example:
+
+```json
+{
+    "user": {
+        "age": 18,
+        "_id": "5e6e0117bb997d0017c94f0d",
+        "name": "User Test",
+        "email": "test@email.com",
+        "createdAt": "2020-03-15T10:19:03.027Z",
+        "updatedAt": "2020-03-15T10:29:26.514Z"
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTZlMDExN2JiOTk3ZDAwMTdjOTRmMGQiLCJpYXQiOjE1ODQyNjgxNjZ9.MSTXSv6RHlZCSkc2HlMKHhr9vHS-4HV7NPHrG4JBkKs"
+}
+```
+
+### Update user's informations
+
+#### Method:
+
+- PATCH: `/users/me`
+
+#### URL Example
+
+> [https://task-manager-node-rest-api.herokuapp.com/users/me](https://task-manager-node-rest-api.herokuapp.com/users/me)
+
+#### Paramethers
+
+|   Paramether   |       Description    |     Type     |   Required   |
+| :------------: | :------------------: | :----------: | :----------: |
+|      name      |   User's name        |    String    |     False    |
+|      age       |   User's age         |    Integer   |     False    |
+|      email     |   User's email       |    String    |     False    |
+|    password    |   User's password    |    String    |     False    |
+|  Authorization | Session user's Token | Bearer Token |     True     |
+
+##### JSON example:
+
+```json
+{
+	"name": "User Test",
+	"age": 18,
+	"email": "test@email.com",
+	"password": "idontknow"
+}
+```
+
 
 ## Authors
 
