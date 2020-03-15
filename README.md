@@ -42,6 +42,9 @@ A Backend RESTful API to store and organize your tasks. It is a secure API becau
 - [How to use tasks API Endpoints](#how-to-use-tasks-api-endpoints)
   - [Create new task to a logged user](#create-new-task-to-a-logged-user)
   - [Get all tasks from a logged user](#get-all-tasks-from-a-logged-user)
+    - [Sorting tasks](#sorting-tasks)
+    - [Pagination tasks](#pagination-tasks)
+    - [Examples](#examples)
   - [Get task by ID from a logged user](#get-task-by-id-from-a-logged-user)
   - [Update task by ID from a logged user](#update-task-by-ID-from-a-logged-user)
   - [Delete task by ID from a logged user](#delete-task-by-id-from-a-logged-user)
@@ -486,11 +489,7 @@ You can also GET all tasks sorted by completed by addind `?sortBy=completed:asc`
 
 You can get a limit of tasks by adding `?limit=10` to the URL so you will get 10 tasks.
 
-> Example: https://task-manager-node-rest-api.herokuapp.com/tasks?limit=10
-
 You can skip the firsts tasks by adding `?skip=10` to the URL. So you can use pagination by limiting the tasks you get by each request and skiping some tasks by adding `?limit=10&skip=10`
-
-> Example: https://task-manager-node-rest-api.herokuapp.com/tasks?limit=10&skip=10
 
 #### Examples
 
