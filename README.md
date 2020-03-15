@@ -157,6 +157,10 @@ $ npm run start
 |    password    |   User's password    |    String    |     True     |
 |  Authorization | Session user's Token | Bearer Token |     True     |
 
+##### Observation:
+
+> **Password length has to be greater than 7 and can not contain the word `password`**
+
 ##### JSON example:
 
 ```json
