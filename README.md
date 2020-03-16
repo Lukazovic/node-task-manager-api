@@ -10,6 +10,7 @@ A Backend RESTful API to store and organize your tasks. It is a secure API becau
 - [Validator.js](https://www.npmjs.com/package/validator)
 - [Bcrypt.js](https://www.npmjs.com/package/bcrypt)
 - [JSON Web Token](https://www.npmjs.com/package/jsonwebtoken)
+- [SendGrid](https://sendgrid.com/)
 - [Jest](https://jestjs.io/)
 - [SuperTest](https://www.npmjs.com/package/supertest)
 
