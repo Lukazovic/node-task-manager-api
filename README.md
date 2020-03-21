@@ -4,15 +4,18 @@ A Backend RESTful API to store and organize your tasks. It is a secure API becau
 
 ### Built With
 
-- [Node.js](https://nodejs.org/en/)
+- [Node](https://nodejs.org/en/)
 - [Express](https://expressjs.com/)
-- [mongoDB](https://www.mongodb.com/)
-- [Validator.js](https://www.npmjs.com/package/validator)
-- [Bcrypt.js](https://www.npmjs.com/package/bcrypt)
+- [MongoDB](https://www.mongodb.com/)
+- [Mongoose](https://mongoosejs.com/)
+- [Nodemon](https://nodemon.io/)
+- [Validator](https://www.npmjs.com/package/validator)
+- [Bcrypt](https://www.npmjs.com/package/bcrypt)
 - [JSON Web Token](https://www.npmjs.com/package/jsonwebtoken)
 - [SendGrid](https://sendgrid.com/)
 - [Jest](https://jestjs.io/)
 - [SuperTest](https://www.npmjs.com/package/supertest)
+- [Multer](https://github.com/expressjs/multer/)
 
 ## Table of Contents
 
@@ -571,6 +574,10 @@ You can skip the firsts tasks by adding `?skip=10` to the URL. So you can use pa
 
 > [https://task-manager-node-rest-api.herokuapp.com/tasks/5e6e0117bb997d0017c94f0d](https://task-manager-node-rest-api.herokuapp.com/tasks/5e6e0117bb997d0017c94f0d)
 
-## Authors
+## Author
 
-- [**Lucas Vieira**](https://github.com/Lukazovic)
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/Lukazovic"><img src="https://avatars0.githubusercontent.com/u/54550926?s=460&u=cdeeac652ce0597a986fbdcff6e249ad27a1f1da&v=4" width="100px;" alt=""/><br /><sub><b>Lucas Vieira</b></sub></a><br /><a href="https://github.com/Lukazovic/node-task-manager-api/" title="Code">💻</a></td>
+  <tr>
+</table>
