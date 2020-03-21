@@ -52,7 +52,7 @@ A Backend RESTful API to store and organize your tasks. It is a secure API becau
   - [Get task by ID from a logged user](#get-task-by-id-from-a-logged-user)
   - [Update task by ID from a logged user](#update-task-by-ID-from-a-logged-user)
   - [Delete task by ID from a logged user](#delete-task-by-id-from-a-logged-user)
-- [Authors](#authors)
+- [Author](#author)
   
 
 ## Setup
