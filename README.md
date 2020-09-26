@@ -2,6 +2,8 @@
 
 A Backend RESTful API to store and organize your tasks. It is a secure API because it does not let other users acess your tasks by authenticate all users.
 
+[Documentação em Português do Brasil](https://github.com/Lukazovic/node-task-manager-api/blob/master/pt-BR-README.md)
+
 ### Built With
 
 - [Node](https://nodejs.org/en/)
